@@ -1,0 +1,294 @@
+// console.log("Hello good morning.");
+// * Variables -> VAR LET CONST
+
+// * Old way of declaring variables (before ES6).
+// var y = "Tauzee";
+// console.log(y);
+// var y = "John";
+// console.log(y)
+// console.log(y)
+
+
+// False
+// console.log(g); //
+// g  = 'undefined'
+// var g = "ayo";
+
+// LET
+// * Introduced in ES6 (2015) to fix issues with var.
+
+// let age = 25;
+
+// ⚠️ Major Issues with var.
+
+
+// if (true) {
+//     var x = 10;
+// }
+// console.log(x);
+
+
+// if (true) {
+//     let x = 10;
+// }
+// console.log(x);
+
+
+// console.log(b);
+// let b = 5;
+
+
+// * let is used to  declare variables that can be reassigned but cannot be redeclared in the same scope.
+
+// let age = 25;
+// age = 26;
+// console.log(age);
+// let age = 30; ❌
+
+// Block Scope.
+
+// if (true) {
+//     let message = "Hello";
+//     console.log(message); // ✅ works.
+// }
+// console.log(message);  // ❌ ReferenceError.
+
+
+/*
+* -> const — Variables That Stay Constant
+🧠 Definition:
+
+const is used to declare block-scoped variables that cannot be reassigned or redeclared.
+Once a const variable is assigned, its reference cannot change.
+*/
+
+// const pi = 3.14159;
+// pi = 13;
+// console.log(pi);
+
+// const president = "ABAT";
+// president = "Ahmad";
+
+// let tropical;
+
+// tropical = "Vanilla";
+// console.log(tropical)
+// tropical = "Tea";
+// console.log(tropical);
+// tropical = "Bread";
+// console.log(tropical);
+
+// ! You must assign a value when declaring a const variable.
+// const y;
+
+// const user = { name: "Ahmahd", age: 28 };
+// ✅  you can modify properties.
+// console.log(user);
+// user.age = 26;
+// user.name = "Tauzee";
+// console.log(user);
+
+
+// ❌ You cannot reassign the object itself
+// user = { name: "john" };
+// console.log(user);
+
+
+
+/*
+       * -> 🧠 What Are Data Types?
+
+Data types define the kind of value a variable can hold — like numbers, text, or objects.
+
+
+*/
+
+// * JAVASCRIPT DATA TYPES OVERVIEW
+// ? Javascript has two major categories of data types:
+
+/*
+* -> Primitive (String, Number, Boolean, Undefined, Null, BigInt, Symbol) ❌ Immutable.
+* -> Object  (Object, Array, function, Date) etc. ✅ Mutable.
+*/
+
+// * 1 Primitive Data Types
+// Primitive types ae the most basic building blocks.
+// They hold single values (not collections) and are immutable -- meaning you can't change them directly.
+
+
+// * ** STRING
+// Used for text
+// let name = "Ibraheem yusuf";
+// console.log(name[4]);
+// name[4] = "Q";
+// console.log(name);
+// let message = 'Hello';
+// let phrase = My name is ${name}; // Template literal.
+
+// ✅ Strings are immutable — you can’t change characters directly:
+
+// let str = "Hi";
+// str
+
+
+// Number
+
+//represent all numeric values (integers, decimals etc.)
+
+// let age = 25;
+// console.log(age)
+// let price = 99.99;
+// console.log(price)
+
+// javascript doesn't have separate types for integers and floats - just number.
+
+/*
+Boolean
+Represent true or false
+*/
+// let isOnline = true;
+// console.log(isOnline)
+// let isAdmin = false;
+// console.log(isAdmin)
+
+/*
+            * -> Object (reference) data types
+
+ * -> Obkects are collections of key-value pairs or complex sructures
+ * ->They are mutBle and stored by refernce, not by value.
+*/
+
+// * Object
+
+// const user = {
+    // name: "Ahmahd",
+    // age:28,
+    // isPresident:true
+// }     
+
+
+// console.log(user.name, user.age, user.isPresident) // to dispaly them one by one
+// console.log(user) // to display all at once
+
+// * Array
+// An ordered collection (list)of value
+
+// const fruits = ["Apple", "Banana", "Orange", 90, true]
+// console.log(fruits[2]) // to call one 
+
+//!   De-structuring
+// console.log(fruits.slice(-2));
+// const [, e, , y, t] = fruits;
+// console.log(e, y)
+
+
+// * ***** STRING PROPERTIES
+
+// Lenght
+// Returns the number of characters in string.
+
+// let text = "Hello world";
+// console.log(text.length);
+
+// let greet = "Hello world";
+// console.log(greet.lenght);
+
+// ** String Methods
+// * Accessing Characters
+// Retuns the character at a specified index'
+
+// let prLanguage = "Javascript";
+// console.log(prLanguage.charAt(0));
+// console.log(prLanguage.charAt(4));
+
+// *** Extracting Part
+// slice(start, end)
+// Extracts a section of a string (end not included).
+
+// let sentence = "How are you doing?";
+// console.log(sentence.slice(0, 5));
+// console.log(sentence.slice(5));
+
+
+
+// let text = 'Hello World, Welcome to the World';
+// console.log(text.indexOf("World"));
+
+
+/*
+    * -> Extracting parts
+slice(starts, end)
+Extracts a section of a string (end not included). 
+*/ 
+
+
+// Managing featured products images
+// const productImages = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg',];
+
+// show only first 3 images in main gallery, rest in thumbnail view.
+
+// const mainGalleryImages = productImages.slice(0, 3);
+// console.log(mainGalleryImages);
+// const thumbnailImages = productImages.slice(3);
+// console.log(thumbnailImages);
+
+
+
+// *** API DEVELOPMENT - Request processing
+
+// * Processing File Uploads
+// Extracting file extension from uploaded file.
+// const uploadedFile = 'quarterly-report.pdf';
+// const fileExtension = uploadedFile.slice(uploadedFile.lastIndexOf('.') +1);
+// console.log(fileExtension);
+
+
+// ** Email & Notification Systems
+// Email Domain Extraction
+
+// const email = "femi@company.com";
+// const domain = email.slice(email.indexOf('@') +1);
+// console.log(domain)
+
+// console.log(domain);
+
+// const username = email.slice(0, email.indexOf('@'));
+// console.log(username);
+
+/*
+* -> substring(start, end)
+Similar to slice, but doesn't accept negative indexes.
+*/
+
+// const creditCard = "4111111111111111";
+// const maskedCard = creditCard.substring(0, 4) + "********" + creditCard.substring(12);
+// console.log(maskedCard);
+
+// ** URL Slug Generation
+const blogTitle = "How to Build Scalable Backend System in 2025";
+
+// console.log(blogTitle.length); 
+
+const slug = blogTitle.substring(0, 45).toLowerCase().replace(/ /g, "-");
+console.log(slug);
+
+// ***** Array -> JAVASCRIPT
+// ? What is an Array? 
+/*
+An array is a data type structure that store multiple values in a single values variable. Arrays can hold any type of data: numbers, strings, objects, even other arrays.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
