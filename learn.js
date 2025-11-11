@@ -265,18 +265,156 @@ Similar to slice, but doesn't accept negative indexes.
 // console.log(maskedCard);
 
 // ** URL Slug Generation
-const blogTitle = "How to Build Scalable Backend System in 2025";
+// const blogTitle = "How to Build Scalable Backend System in 2025";
 
 // console.log(blogTitle.length); 
 
-const slug = blogTitle.substring(0, 45).toLowerCase().replace(/ /g, "-");
-console.log(slug);
+// const slug = blogTitle.substring(0, 45).toLowerCase().replace(/ /g, "-");
+// console.log(slug);
 
 // ***** Array -> JAVASCRIPT
 // ? What is an Array? 
 /*
 An array is a data type structure that store multiple values in a single values variable. Arrays can hold any type of data: numbers, strings, objects, even other arrays.
 */
+
+// * Creating arrays
+
+// const fruits = ['apple', 'banana', 'orange'];
+// const numbers = [1, 2, 3, 4, 5];
+// const mixed = [1, 'hello', true, null, {name: 'john'}];
+// const empty = [];
+
+// Array properties
+// Lenght
+// Returns the number of elements in an array.
+
+
+// const colors = ['red', 'green', 'blue'];
+// console.log(colors.length);
+
+// * -> Array Methods
+// Adding/Removing Elements (.push method)
+
+// const animals = ['cat', 'dog'];
+// animals.push('bird');
+
+// Add multiple elements
+// animals.push('fish', 'hamster');
+// console.log(animals);
+// File Upload Tracking
+// ? Tracking uploaded files
+// const uploadedFiles = [
+    // {filename: 'document.pdf', size: '2.5MB'},
+    // {filename: 'image.jpg', size: '1.8MB'}
+// ];
+
+// const newFile = {filename: 'Video.mp4', size: '15.2MB'};
+// uploadedFiles.push(newFile);
+// console.log(uploadedFiles);
+
+// pop()- Removes the Last element.
+
+// const fruits = ['apple', 'banana', 'orange'];
+// const removed = fruits.pop();
+// console.log(removed);
+// console.log(fruits);
+
+// unshift - Adds elements to the beginning.
+// const numbers = [2, 3, 4];
+// numbers.unshift(1);
+// console.log(numbers);
+// numbers.unshift(-1, 0);
+// console.log(numbers);
+
+// shift() - Removes the first element. 
+// const colors = ['red', 'green', 'blue'];
+// const removed = colors.shift();
+// console.log(colors);
+
+// ** searching Elements
+// indexOf() - Find the index of an element
+// ! User Authentication Check
+// Checking if User is in blocked list
+// const blockedUsers = ['user123', 'spammer456', 'bot789'];
+// const loginAttempt = 'User123';
+// const isBlocked = blockedUsers.indexOf(loginAttempt);
+// console.log(isBlocked);
+
+// includes() - Checks if an element exists.
+// const pets = ['cat', 'dog', 'bird'];
+// console.log(pets.includes('dog'));
+
+
+// find() - Returns the first element that matches a condition.
+// const numbers = [5, 12, 8, 130, 44];
+// const found = numbers.find(y => y > 10);
+// console.log(found);
+
+// includes() - Checks if an element exists.
+// const pets = ['cats', 'dog', 'bird'];
+// console.log(pets.includes('dog'));
+// const found = pets.find(num => num === 'dog');
+// console.log(found);
+
+// find() - Return the first elements that matches a condition.
+// const numbers = [5, 12, 8, 130, 44];
+
+const users = [
+    [101, "john@mail.com", 'active'],
+    [102, "john@mail.com", 'inactive'],
+    [103, "mike@mail.com", 'active'],
+];
+
+// const foundUser = users.find(user => user[0] === 102);
+// console.log(foundUser);
+
+// .filter() Finds all matches A new array of all matching elements
+const foundUser = users.filter(user => user[2] === 'active');
+console.log(foundUser);
+
+/* 
+   Transporting Arrays
+   map() - Creates a new array by transforming each element
+*/
+
+const numbers = [1, 2, 3, 4];
+// const doubled = numbers.map(num => num * 2);
+const names = ['Thakzin', 'Ibnu', 'Tauzee', 'Ashiwaju', 'Ahmeedi'];
+const uppercase = names.map(name => name.toUpperCase());
+console.log(uppercase);
+// console.log(doubled);
+
+
+// * slice() - Extracts a portion of an array (doesn't modify original)
+
+// ** Server Load Distribution
+const servers = [
+    ['web01', 'primary', '80%'],
+    ['web02', 'primary', '75%'],
+    ['web03', 'secondary', '60%'],
+    ['web04', 'secondary', '55%'],
+    ['web05', 'backup', '10%'],
+];
+const secondaryServers = servers.slice(2, 4);
+console.log(secondaryServers);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
