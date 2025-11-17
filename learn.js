@@ -617,6 +617,40 @@ do{
 }
 } while (withdrawAmount > 0);
 
+// *** for...of loop (ES6)
+// Used to Loop through arrays, strings, map, sets, etc.
+
+const fruits = ["apple", "banana", "orange"];
+for(const fruit of fruits){
+    console.log(fruit);
+}
+
+// *** Email spam filter.
+
+let emails = [
+    "hello@company.com",
+    "spam@lottery.com",
+    "friend@email.com",
+    "winner@fake.com",
+    "boss@work.com",
+];
+
+let spamKeywords = ["spam", "lottery", "winner", "fake"];
+for (let email of emails){
+    let isSpam = false;
+    for(let keyword of spamKeywords){
+        if(email.includes(keyword)){
+            isSpam = true;
+            break;
+        }
+    }
+    if(isSpam){
+        console.log(`❌ SPAM ${email}`);
+    }  else{
+    console.log(`✔️ INBOX ${email}`);
+}
+}
+
 
 
 
