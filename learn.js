@@ -275,7 +275,7 @@ Similar to slice, but doesn't accept negative indexes.
 // ***** Array -> JAVASCRIPT
 // ? What is an Array? 
 /*
-An array is a data type structure that store multiple values in a single values variable. Arrays can hold any type of data: numbers, strings, objects, even other arrays.
+An array is a data type structure that store multiple values in a single values variable. Arrays can hold any type of data: numbers, strings,  objects, even other arrays.
 */
 
 // * Creating arrays
@@ -360,56 +360,262 @@ An array is a data type structure that store multiple values in a single values 
 // find() - Return the first elements that matches a condition.
 // const numbers = [5, 12, 8, 130, 44];
 
-const users = [
-    [101, "john@mail.com", 'active'],
-    [102, "john@mail.com", 'inactive'],
-    [103, "mike@mail.com", 'active'],
-];
+// const users = [
+//     [101, "john@mail.com", 'active'],
+//     [102, "john@mail.com", 'inactive'],
+//     [103, "mike@mail.com", 'active'],
+// ];
 
 // const foundUser = users.find(user => user[0] === 102);
 // console.log(foundUser);
 
 // .filter() Finds all matches A new array of all matching elements
-const foundUser = users.filter(user => user[2] === 'active');
-console.log(foundUser);
+// const foundUser = users.filter(user => user[2] === 'active');
+// console.log(foundUser);
 
 /* 
    Transporting Arrays
    map() - Creates a new array by transforming each element
 */
 
-const numbers = [1, 2, 3, 4];
+// const numbers = [1, 2, 3, 4];
 // const doubled = numbers.map(num => num * 2);
-const names = ['Thakzin', 'Ibnu', 'Tauzee', 'Ashiwaju', 'Ahmeedi'];
-const uppercase = names.map(name => name.toUpperCase());
-console.log(uppercase);
+// const names = ['Thakzin', 'Ibnu', 'Tauzee', 'Ashiwaju', 'Ahmeedi'];
+// const uppercase = names.map(name => name.toUpperCase());
+// console.log(uppercase);
 // console.log(doubled);
 
 
 // * slice() - Extracts a portion of an array (doesn't modify original)
 
 // ** Server Load Distribution
-const servers = [
-    ['web01', 'primary', '80%'],
-    ['web02', 'primary', '75%'],
-    ['web03', 'secondary', '60%'],
-    ['web04', 'secondary', '55%'],
-    ['web05', 'backup', '10%'],
-];
-const secondaryServers = servers.slice(2, 4);
-console.log(secondaryServers);
+// const servers = [
+//     ['web01', 'primary', '80%'],
+//     ['web02', 'primary', '75%'],
+//     ['web03', 'secondary', '60%'],
+//     ['web04', 'secondary', '55%'],
+//     ['web05', 'backup', '10%'],
+// ];
+// const secondaryServers = servers.slice(2, 4);
+// console.log(secondaryServers);
+
+// ** -> splice() - Adds/removes elements (modifies original)
+
+/*
+    The `splice()` method changes the contents of an array by:
+
+    * -> removing
+    * -> replacing, or
+    * * -> elements at specific positions.
+    
+    It modifies the original array (unlink slice() which returns a new one).
+
+*/
+
+// 🛒 Removing an item from a shopping cart.
+
+// let cart = ['Shirt', 'Trousers', 'Shoes', 'Watch'];
+// cart.splice(0, 2);
+// console.log(cart);
+
+// Adding a new item to the middle of a list.
+
+// const playlist = ['Song A', 'Song B', 'Song D'];
+// playlist.splice(2, 0, 'Song C');  // add something and delete none
+// playlist.splice(2, 1, 'Song C');    // add song c in the index2 and delete song d
+// console.log(playlist);
+
+// 📃 Managing a To-Do List
+// let tasks = ['Wake up', 'Brush', 'Exercise', 'Breakfast'];
+// tasks.splice(1, 1, 'Shower');
+// console.log(tasks);   // replacing one element on the list with the other using .splice
 
 
+// **** JAVASCRIPT OBJECT
+
+// An object is data structure that stores information in key values pairs.
+// Each key (also called a property) is like a label, and the value is the data stored under that label.
+
+// let person = {
+//     name: "Femi",
+//     age: 25,
+//     course: "Computer Science",
+//     job: "Backend Engineer",
+//     tel: "08163207400",
+//     "first name": "Olusola"
+// };
+// console.log(person);
+
+// Accesing objects values 
+// There are two main ways to access an object's value.
+// * Dot notation
+// console.log(person.name);
+
+// * Bracket notation
+// console.log(person['job']);
+// console.log(person["first name"]);
+
+// Adding and Updating Properties
+// You can add new properties or update existing ones easily.
+
+// person.country = "Nigeria";
+// person.age = 26;
+// console.log(person);
+
+// Deleting properties
+// delete person.course;
+// console.log(person);
+
+// ** Nested Objects
+
+// let user = {
+//     name: "Olusola Obafemi",
+//     address: {
+//         city: "Ado-Ekiti",
+//         zip: 360101
+//     },
+//     hobbies: ["Coding", "Reading"]
+// };
+// console.log(user.address.city);  // to select Ado-Ekiti
+// console.log(user.hobbies[1])
+// console.log(user.hobbies.indexOf("Reading"));
+// user.pet = "Dog";
+// console.log(user);
+// user.hobbies.splice(0,0, "Cooking");  // adding element into the nested object
+// console.log(user);
+
+/* 
+   *** -> LOOP
+   A loop lets you repeat a block code multiple times - automatically.
+      `Types of loops in Javascript`
+      Loop types (for, while, do...while, for...of, for...in)
+
+      `for` -> When you know how many times to repeat.
+      `while` -> when you don't know the exact count, but have a condition
+      `do...while` -> similar to `while` but runs at least once
+      `for...of` -> To loop through arrays or strings
+      `for...in` -> To loop through object properties
+*/
+
+// for(let i = 1; i <= 5; i++){
+//     console.log(i);
+// };
+
+// const dirtyDishes = ["plate", "bowl", "cup", "fork", "spoon"];
+// for(let i = 0; i < dirtyDishes.length; i++){
+//     console.log(`washing: ${dirtyDishes[i]}`);
+//     console.log(`${dirtyDishes[i]} is now clean!`);
+// };
+
+// const dirtyDishes = ["plate", "bowl", "cup", "fork", "spoon"];
+
+// for(let i = 0; i < dirtyDishes.length; i++){
+//     console.log(`washing: ${dirtyDishes[i]}`);
+//     console.log(`${dirtyDishes[i]} is now clean`);
+    
+//}
 
 
+// const dirtyDishes = ["plate", "bowl", "cup", "fork", "spoon"];
+
+// for(let i = 0; i < dirtyDishes.length; i++){
+//     console.log(`washing ${dirtyDishes[i]}`);
+//     console.log(`${dirtyDishes[i]} is now clean`);
+    
+// };
+
+// const remote = ["Pg", "Ok", "Alt", "Exit", "Mute", "Menu", "Subtitles", "Tv", "Help", "TvGuide", "Power"];
+// for(let i = 0; i = remote.slice(0, 10);){
+//     console.log(`switch-ON/OFF: ${remote[i]}`)
+//     console.log(`${remote[i]} TV is now working`)
+// };
+
+// * Grocery Shopping (Working with lists)
+// Checking items off your Shopping list
+// const shoppingList = ["milk", "eggs", "bread", "cheese"];
+// const cart = [];
+
+// for( let i = 0; i < shoppingList.length; i++){
+//     console.log(`✔️  Added ${shoppingList[i]} to cart`);
+//     cart.push(shoppingList[i]);
+// };
+// console.log("cart contains:", cart);
 
 
+// ** While Loop
+// Runs as long as the condition is true.
+// let i = 0;
+// while(i < 5){
+//     console.log(i);
+//     i++;
+// }
+
+// ** Charging Your Phone
+// Monitoring battery level charging.
+
+// let batteryLevel = 15; // Starting with low battery
+// const chargingRate = 8; // % per iteration.
+
+// console.log("📱 phone charging started...");
+// while(batteryLevel < 100){
+//     batteryLevel += chargingRate;
+
+//     if(batteryLevel > 100) batteryLevel = 100;
+//     console.log(`Battery ${batteryLevel}%`);
+
+//     if(batteryLevel >= 80){
+//         console.log(" ⚡ Almost full! Fast charging slowing down...");
+//     }
+// }
+// console.log(batteryLevel);
+
+// console.log(" 🔋Battery fully charged!");
 
 
+// *** do...while loop
+//  Runs at least once, then, checks the condition.
+// the do...while loop is special because it guarantees the code runs at least once, then continues as long the condition remains true.
+// let i = 0;
+// do{
+//     console.log(i);
+//     i++;
+// } while(i < 5);
 
+// *** password length checker
+// let passwords = ["123", "pass", "mysecurePass", "abc"];
+// let index = 0;
+// let validPassword = "";
 
+// do{
+//     let currentPassword = passwords[index];
+//     console.log(`Checking password ${currentPassword}`);
 
+//     if(currentPassword.length >= 8){
+//         validPassword = currentPassword;
+//         console.log(`valid password found ${validPassword}`);
+//     }else{
+//         console.log(`Too short! minimum 8 characters required.`);
+//     }
+//     index++;
+// } while(index < passwords.length && validPassword === "");
 
+// *** ATM Withdrawal Validator.
+let balance = 1000;
+let withdrawAmount = 1500;
+let attempts = 0;
+
+do{
+    attempts++;
+    console.log(`Attempt ${attempts} Trying to withdraw $${withdrawAmount}`);
+    if(withdrawAmount <= balance){
+        balance -= withdrawAmount;
+        console.log(`Success! Withdrew $${withdrawAmount}. New balance $${balance}`);
+        break;
+}else{
+    console.log(`insufficient funds. Blance $${balance}`);
+    withdrawAmount -= 200; // reduce withdrawal amount.
+}
+} while (withdrawAmount > 0);
 
 
 
