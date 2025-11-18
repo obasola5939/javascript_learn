@@ -524,12 +524,7 @@ An array is a data type structure that store multiple values in a single values 
     
 // };
 
-// const remote = ["Pg", "Ok", "Alt", "Exit", "Mute", "Menu", "Subtitles", "Tv", "Help", "TvGuide", "Power"];
-// for(let i = 0; i = remote.slice(0, 10);){
-//     console.log(`switch-ON/OFF: ${remote[i]}`)
-//     console.log(`${remote[i]} TV is now working`)
-// };
-
+//  
 // * Grocery Shopping (Working with lists)
 // Checking items off your Shopping list
 // const shoppingList = ["milk", "eggs", "bread", "cheese"];
@@ -612,7 +607,7 @@ do{
         console.log(`Success! Withdrew $${withdrawAmount}. New balance $${balance}`);
         break;
 }else{
-    console.log(`insufficient funds. Blance $${balance}`);
+    console.log(`insufficient funds. Balance $${balance}`);
     withdrawAmount -= 200; // reduce withdrawal amount.
 }
 } while (withdrawAmount > 0);
@@ -634,7 +629,7 @@ let emails = [
     "winner@fake.com",
     "boss@work.com",
 ];
-
+  
 let spamKeywords = ["spam", "lottery", "winner", "fake"];
 for (let email of emails){
     let isSpam = false;
@@ -652,12 +647,160 @@ for (let email of emails){
 }
 
 
+// ** Conditional Statements
+// Conditional Statement check conditions (true/false expressions) and decide what code should run.
+
+// in Javascript, the main conditional statements are:
+/*
+   * `if`
+   * `if...else`
+   * `else if`
+   * `switch`
+   * `ternary operator`
+   * optional chaining + nullish coalescing (modern JS).
+*/
+
+// if Statement
+// Runs a block only if the condition is true.
+
+// let age = 20;
+// let if(age >= 18){
+//    console.log("You are an adult"):
+// };
+
+// if...else statement
+// if the condition is true -> run block A
+// Else -> run block B
+
+
+// let age = 15;
+// if(age >= 18){
+//     console.log("Adult");
+// } else{
+//     console.log("Minor");
+// }
+
+// else if Statement
+// * Used when you need check multiple conditions.
+
+
+let score = 75;
+if(score >= 90){
+    console.log("A");
+} else if(score >= 70){
+    console.log("B");
+} else if(score >= 50){
+    console.log("C");
+} else{
+    console.log("Fail");
+} 
+
+// ** Switch Statements
+// Used when you are checking one value against many cases.
+// Cleaner than many `else if` statements.
+
+
+let day = 3;
+switch(day){
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Teusday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+        default:
+            console.log("invalid day");
+}
+
+// * Ternary Operator `? :`.
+// Short form and   `if...else`
+// Good for simple decisions.
+
+let age = 18;
+let message = age >= 18 ? "Adult" : "Minor";
+
+console.log(message);
+
+
+// *** Function in Javascript.
+// A function is reusable block of code that performs a specific task.
+// You write function once, and use it many times.
+
+// why use funtions?
+
+/*
+    * -> Reduce code repetition
+    * -> Organize code into readable parts.
+    * -> make code reusable
+    * -> make programs cleaner.
+*/
+
+// ** 🧱 Basic function structure
+
+/*
+        ****************
+        function greet(){
+        console.log("Hello!");
+        }
+        ****************
+*/
+
+// * `function` -> Keyword.
+// * `greet` -> function name.   
+// * `()` -> parameters area
+// * `{}` -> function body
 
 
 
+/*
+    To run the function:
+    *********
+    greet() // outputs: Hello!
+    *********
+*/
+
+// * Function parameters & Arguments 
+// Parameters -> placeholders inside the function
+// Arguments -> actual values you pass
+
+/* 
+   ****************
+   function greet(name){
+   console.log("Hello " + name);
+   }
+
+   greet("Ibraheem"); // argument: "Ibraheem"
+   ****************
+*/
 
 
 
+//  ⭐ Return Statement
+// A function can return a value.
+
+/*
+   ********************
+function add(a, b){
+    return a + b;
+}
+    console.log(add(5, 3)); // 8
+    ********************
+    once `return` runs, the function stops execution.
+*/
+
+// ⭐ Default Parameters
+/* 
+   ********************
+   function greet(name = "Guest"){
+       console.log("Hello " + name);
+   }
+    greet(); // Hello Guest
+    greet("Sam"); // Hello Sam
+    **********************
+*/
 
 
 
