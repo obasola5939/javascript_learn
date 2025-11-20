@@ -804,6 +804,96 @@ function add(a, b){
 
 
 
+// * Function Declaration
+
+// function functionName(parameters){
+    // return value;
+// }
+
+
+// function Expressions
+// A function stored in a variable
+const greet = function(){
+    console.log("Hi");
+}
+greet();
+
+const multiply = function(a, b){
+    return a * b;
+}
+
+console.log(multiply(5, 3));  // 15
+
+// Arrow Functions(ES6)
+
+const functionName = (parameters) =>  {
+    // function body.
+    return value;
+    
+    
+}
+
+
+// single parameter (parenthesis optional)
+const square = x => x * x;
+
+
+// no parameters
+
+const sayHello = () => "Hello";
+
+// Implicit return
+const add = (a, b) => a+b;
+
+// --- CALLING THEM ---
+console.log(square(5));
+console.log(sayHello());
+
+console.log(add(10, 20));
+
+// // Using Math.pow()
+// let result2 = Math.pow(5, 2);
+// console.log(results2); // 25
+
+
+// Immediately Invoked Function Expression (IIFE)
+(function(){
+
+})();
+
+// or with arrow function
+(() => {
+    // code here.
+})();
+
+// ** Examples
+(function(){
+    const add = (a, b) => a + b;
+    const result = add(5, 7);
+    console.log("The sum is :", result);
+})();
+
+(() => {
+    const square = x => x * x;
+    const value = square(6);
+    console.log("The square is:", value);
+})();
+
+
+// Remove Duplicates from Array:
+
+// Write a function that takes an array with duplicate elements and returns a new array containing only the unique elements.
+
+// Example: [1, 2, 2, 3, 4, 4, 5] should return [1, 2, 3, 4, 5].
+
+// *** ✅ SOLUTION
+
+function removeDuplicates(arr){
+    return [...new Set(arr)];
+}
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
+
+
 
 
 
