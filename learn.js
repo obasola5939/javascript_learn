@@ -595,56 +595,56 @@ An array is a data type structure that store multiple values in a single values 
 // } while(index < passwords.length && validPassword === "");
 
 // *** ATM Withdrawal Validator.
-let balance = 1000;
-let withdrawAmount = 1500;
-let attempts = 0;
+// let balance = 1000;
+// let withdrawAmount = 1500;
+// let attempts = 0;
 
-do{
-    attempts++;
-    console.log(`Attempt ${attempts} Trying to withdraw $${withdrawAmount}`);
-    if(withdrawAmount <= balance){
-        balance -= withdrawAmount;
-        console.log(`Success! Withdrew $${withdrawAmount}. New balance $${balance}`);
-        break;
-}else{
-    console.log(`insufficient funds. Balance $${balance}`);
-    withdrawAmount -= 200; // reduce withdrawal amount.
-}
-} while (withdrawAmount > 0);
+// do{
+//     attempts++;
+//     console.log(`Attempt ${attempts} Trying to withdraw $${withdrawAmount}`);
+//     if(withdrawAmount <= balance){
+//         balance -= withdrawAmount;
+//         console.log(`Success! Withdrew $${withdrawAmount}. New balance $${balance}`);
+//         break;
+// }else{
+//     console.log(`insufficient funds. Balance $${balance}`);
+//     withdrawAmount -= 200; // reduce withdrawal amount.
+// }
+// } while (withdrawAmount > 0);
 
 // *** for...of loop (ES6)
 // Used to Loop through arrays, strings, map, sets, etc.
 
-const fruits = ["apple", "banana", "orange"];
-for(const fruit of fruits){
-    console.log(fruit);
-}
+// const fruits = ["apple", "banana", "orange"];
+// for(const fruit of fruits){
+//     console.log(fruit);
+// }
 
 // *** Email spam filter.
 
-let emails = [
-    "hello@company.com",
-    "spam@lottery.com",
-    "friend@email.com",
-    "winner@fake.com",
-    "boss@work.com",
-];
+// let emails = [
+//     "hello@company.com",
+//     "spam@lottery.com",
+//     "friend@email.com",
+//     "winner@fake.com",
+//     "boss@work.com",
+// ];
   
-let spamKeywords = ["spam", "lottery", "winner", "fake"];
-for (let email of emails){
-    let isSpam = false;
-    for(let keyword of spamKeywords){
-        if(email.includes(keyword)){
-            isSpam = true;
-            break;
-        }
-    }
-    if(isSpam){
-        console.log(`❌ SPAM ${email}`);
-    }  else{
-    console.log(`✔️ INBOX ${email}`);
-}
-}
+// let spamKeywords = ["spam", "lottery", "winner", "fake"];
+// for (let email of emails){
+//     let isSpam = false;
+//     for(let keyword of spamKeywords){
+//         if(email.includes(keyword)){
+//             isSpam = true;
+//             break;
+//         }
+//     }
+//     if(isSpam){
+//         console.log(`❌ SPAM ${email}`);
+//     }  else{
+//     console.log(`✔️ INBOX ${email}`);
+// }
+// }
 
 
 // ** Conditional Statements
@@ -684,45 +684,45 @@ for (let email of emails){
 // * Used when you need check multiple conditions.
 
 
-let score = 75;
-if(score >= 90){
-    console.log("A");
-} else if(score >= 70){
-    console.log("B");
-} else if(score >= 50){
-    console.log("C");
-} else{
-    console.log("Fail");
-} 
+// let score = 75;
+// if(score >= 90){
+//     console.log("A");
+// } else if(score >= 70){
+//     console.log("B");
+// } else if(score >= 50){
+//     console.log("C");
+// } else{
+//     console.log("Fail");
+// } 
 
 // ** Switch Statements
 // Used when you are checking one value against many cases.
 // Cleaner than many `else if` statements.
 
 
-let day = 3;
-switch(day){
-    case 1:
-        console.log("Monday");
-        break;
-    case 2:
-        console.log("Teusday");
-        break;
-    case 3:
-        console.log("Wednesday");
-        break;
-        default:
-            console.log("invalid day");
-}
+// let day = 3;
+// switch(day){
+//     case 1:
+//         console.log("Monday");
+//         break;
+//     case 2:
+//         console.log("Teusday");
+//         break;
+//     case 3:
+//         console.log("Wednesday");
+//         break;
+//         default:
+//             console.log("invalid day");
+// }
 
 // * Ternary Operator `? :`.
 // Short form and   `if...else`
 // Good for simple decisions.
 
-let age = 18;
-let message = age >= 18 ? "Adult" : "Minor";
+// let age = 18;
+// let message = age >= 18 ? "Adult" : "Minor";
 
-console.log(message);
+// console.log(message);
 
 
 // *** Function in Javascript.
@@ -813,43 +813,43 @@ function add(a, b){
 
 // function Expressions
 // A function stored in a variable
-const greet = function(){
-    console.log("Hi");
-}
-greet();
+// const greet = function(){
+//     console.log("Hi");
+// }
+// greet();
 
-const multiply = function(a, b){
-    return a * b;
-}
+// const multiply = function(a, b){
+//     return a * b;
+// }
 
-console.log(multiply(5, 3));  // 15
+// console.log(multiply(5, 3));  // 15
 
-// Arrow Functions(ES6)
+// // Arrow Functions(ES6)
 
-const functionName = (parameters) =>  {
-    // function body.
-    return value;
+// const functionName = (parameters) =>  {
+//     // function body.
+//     return value;
     
     
-}
+// }
 
 
 // single parameter (parenthesis optional)
-const square = x => x * x;
+// const square = x => x * x;
 
 
 // no parameters
 
-const sayHello = () => "Hello";
+// const sayHello = () => "Hello";
 
 // Implicit return
-const add = (a, b) => a+b;
+// const add = (a, b) => a+b;
 
 // --- CALLING THEM ---
-console.log(square(5));
-console.log(sayHello());
+// console.log(square(5));
+// console.log(sayHello());
 
-console.log(add(10, 20));
+// console.log(add(10, 20));
 
 // // Using Math.pow()
 // let result2 = Math.pow(5, 2);
@@ -857,25 +857,25 @@ console.log(add(10, 20));
 
 
 // Immediately Invoked Function Expression (IIFE)
-(function(){
+// (function(){
 
-})();
+// })();
 
 // or with arrow function
-(() => {
+// (() => {
     // code here.
-})();
+// })();
 
 // ** Examples
-(function(){
-    const add = (a, b) => a + b;
-    const result = add(5, 7);
-    console.log("The sum is :", result);
-})();
+// (function(){
+//     const add = (a, b) => a + b;
+//     const result = add(5, 7);
+//     console.log("The sum is :", result);
+// })();
 
 (() => {
-    const square = x => x * x;
-    const value = square(6);
+     const square = x => x * x;
+    const value = square(12+67);
     console.log("The square is:", value);
 })();
 
@@ -888,12 +888,158 @@ console.log(add(10, 20));
 
 // *** ✅ SOLUTION
 
-function removeDuplicates(arr){
-    return [...new Set(arr)];
+// function removeDuplicates(arr){
+//     return [...new Set(arr)];
+// }
+// console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
+
+
+
+
+// Write a function redundant that takes in a string str and returns a function that returns str.
+
+// Examples
+// const f1 = redundant("apple")
+// f1() ➞ "apple"
+
+// const f2 = redundant("pear")
+// f2() ➞ "pear"
+
+// const f3 = redundant("")
+// f3() ➞ ""
+// Notes
+// Your function should return a function, not a string.
+
+                //  solution
+function redundant(str) {
+	return function(){
+		return str;
+	}
 }
-console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
+
+const f1 = redundant("apple");
+console.log(f1());
 
 
+
+// Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+
+// Examples
+// addition(0) ➞ 1
+
+// addition(9) ➞ 10
+
+// addition(-3) ➞ -2
+// Notes
+// Don't forget to return the result.
+// If you get stuck on a challenge, find help in the Resources tab.
+// If you're really stuck, unlock solutions in the Solutions tab.
+
+
+// solution
+
+function addition(num) {
+	return num + 1
+}
+console.log(addition(0));
+console.log(addition(9));
+console.log(addition(-3));
+
+
+// Fix the code in the code tab to pass this challenge (only syntax errors). Look at the examples below to get an idea of what the function should do.
+
+// Examples
+// cubes(3)
+
+// cubes(5) 
+
+// cubes(10)
+
+// solution
+
+function cubes(a) {
+	return a ** 3
+}
+console.log(cubes(3));
+console.log(cubes(5));
+console.log(cubes(10));
+
+
+
+// Write a function that takes an integer minutes and converts it to seconds.
+
+// Examples
+convert(5)
+
+convert(3)
+
+convert(2)
+
+
+function convert(minutes) {
+	return minutes * 60
+}
+console.log(convert(5));
+console.log(convert(3));
+console.log(convert(2));
+
+
+// creating object
+
+// const person = {
+//     name: "john",
+//     age: 30,
+//     greet: function(){
+//         return `Hello, my name is ${this.name}`;  // a function inside object is a method
+//     }
+// }
+// console.log(person.name);
+// console.log(person.greet());
+
+
+// ****** B4 ES6
+// By convention, constructor functions are named starting with an uppercase Letter. Its purpose is to initialize new `person` objects.
+function Person(name, age){
+
+    // the `this` Keyword inside the constructor reffers to that newly created objects.
+    this.name = name;
+    this.age = age;
+
+// * Method
+    this.greet = function(){
+        return `Hello, my name is ${this.name}, My age is ${this.age}.`;
+    }
+}
+
+// creating instances
+const person1 = new Person('John', 30);
+const Person2 = new Person('Jane', 25);
+
+console.log(person1.greet());
+console.log(Person2.greet());
+
+// *** Array properties
+
+function Liberty(name, books){
+    this.name = name;
+    this.books = books || [];
+
+    this.addBook = function(book){
+        this.books.push(book);
+    };
+}
+
+const Iib = new Liberty("City Libary", ["Math", "English"]);
+Iib.addBook("Physics");
+
+console.log(Iib.books);
+
+
+
+
+
+
+  
 
 
 
